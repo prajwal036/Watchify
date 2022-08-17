@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri&family=Poppins&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@700&display=swap');
+
+:root{
+    --primary-color: #220909;
+    --secondary-color: #a12a2a;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--primary-color);
+    font-family: 'Poppins', sans-serif;
+    margin:0;
+}
+header{
+    padding:1rem;
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--secondary-color);
+}
+#home{
+    font-family: 'Kalam', cursive;
+    margin: 0;
+    color: white;
+}
+#home:hover{
+    cursor: pointer;
+}
+
+.search{
+    background-color: transparent;
+    border: 2px solid white;
+    border-radius: 50px;
+    font-family: inherit;
+    font-size: 1rem;
+    padding: .5rem 1rem;
+    color: white;
+}
+
+.search::placeholder{
+    color: #ffffff;
+}
+
+.search:focus{
+    outline:none;
+    background-color: var(--primary-color);
+}
+
+
+main{
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: center;
+}
+
+.movie{
+    width:290px;
+    margin:1rem;
+    background-color: var(--secondary-color);
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+    border-radius: 3px;
+}
+
+.movie img{
+    width:100%;
+}
+
+.movie-info{
+    color: #eee;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 1rem 1rem;
+    letter-spacing: 0.5px;
+}
+
+.movie-info h3{
+    margin-top: 0;
+}
+
+.movie-info span{
+    background-color: var(--primary-color);
+    padding: 0.25rem  0.5rem;
+    border-radius: 3px;
+    font-weight: bold;
+}
+
+.movie-info span.green{
+    color: lightgreen;
+}
+
+.movie-info span.orange {
+    color: orange;
+}
+
+.movie-info span.red {
+    color: red;
+}
+
+
+.overview{
+    background-color: #fff;
+    padding: 2rem;
+    position: absolute;
+    left: 0;
+    bottom:0;
+    right:0;
+    max-height: 60%;
+    transform: translateY(101%);
+    transition: transform 0.3s ease-in;
+    overflow: scroll;
+}
+.insideHeader{
+    display: flex;
+    justify-content: space-between;
+}
+
+#overview-head{
+    position: relative;
+}
+
+
+.movie:hover .overview{
+    transform: translateY(0);
+}
